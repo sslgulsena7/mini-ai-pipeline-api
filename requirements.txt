@@ -1,0 +1,17 @@
+numpy>=1.24.0,<2.0.0
+pytesseract
+Pillow
+opencv-python-headless
+transformers>=4.41.2
+torch
+sentence-transformers>=2.7.0
+faiss-cpu
+scikit-learn
+gradio>=4.40.0
+matplotlib
+seaborn
+plotly
+pandas
+psutil
+tqdm
+wikipedia-api
