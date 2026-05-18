@@ -126,7 +126,7 @@ Bu proje **Google Colab** ortamı için tasarlanmıştır.
 ### 1. Repoyu klonla
 
 ```bash
-git clone https://github.com/KULLANICI_ADI/REPO_ADI.git
+git clone https://github.com/sslgulsena7/mini-ai-pipeline-api.git
 ```
 
 ### 2. Google Colab'da aç
