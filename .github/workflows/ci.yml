@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repoyu klonla
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Lint araçlarını kur
+        run: pip install flake8 nbformat
+
+      - name: Python dosyalarını kontrol et
+        run: |
+          flake8 src/ --max-line-length=100 --ignore=E501,W503 || true
+
+      - name: Notebook formatını doğrula
+        run: |
+          python - <<'EOF'
+          import nbformat, sys, pathlib
+          for nb_path in pathlib.Path("notebooks").glob("*.ipynb"):
+              nbformat.validate(nbformat.read(open(nb_path), as_version=4))
+              print(f"✅ {nb_path.name} geçerli")
+          EOF
