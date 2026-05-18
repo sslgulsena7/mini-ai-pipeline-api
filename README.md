@@ -297,10 +297,3 @@ pipeline/
 Thumbs.db
 ```
 
-
-
-## 📅 Versiyon
-
-**v1.0.0** — Hafta 9-10 teslimi (Mayıs 2026)
-
-Pipeline tüm modüller entegre, Colab CPU üzerinde test edilmiştir.
